@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.1.1 (Python 3.13.1 on win32)" generated="2025-01-10T00:07:57.995904" rpa="false" schemaversion="5">
+<suite id="s1" name="Valid Login" source="D:\Lab7-TestAutomation\WebDemo-master\login_tests\valid_login.robot">
+<test id="s1-t1" name="Valid Login" line="9">
+<kw name="Open Browser To Login Page" owner="resource">
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-01-10T00:07:58.261385" level="INFO">${chrome_options} = &lt;selenium.webdriver.chrome.options.Options object at 0x0000022C0D8492B0&gt;</msg>
+<var>${chrome_options}</var>
+<arg>sys.modules['selenium.webdriver'].ChromeOptions()</arg>
+<arg>sys</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-01-10T00:07:58.261103" elapsed="0.000317"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-01-10T00:07:58.261682" level="INFO">${chrome_options.binary_location} = D:Lab7-TestAutomationChromeForTestingchromechrome.exe</msg>
+<var>${chrome_options.binary_location}</var>
+<arg>${CHROME_BROWSER_PATH}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-01-10T00:07:58.261538" elapsed="0.000170"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-01-10T00:07:58.262360" level="INFO">${service} = &lt;selenium.webdriver.chrome.service.Service object at 0x0000022C0D849010&gt;</msg>
+<var>${service}</var>
+<arg>sys.modules["selenium.webdriver.chrome.service"].Service(executable_path=r"${CHROME_DRIVER_PATH}")</arg>
+<arg>sys</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-01-10T00:07:58.261791" elapsed="0.000594"/>
+</kw>
+<kw name="Create Webdriver" owner="SeleniumLibrary">
+<msg time="2025-01-10T00:07:58.262648" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<msg time="2025-01-10T00:07:58.262810" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg time="2025-01-10T00:07:58.262899" level="FAIL">NoSuchDriverException: Message: Unable to obtain driver for chrome; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location
+</msg>
+<arg>Chrome</arg>
+<arg>options=${chrome_options}</arg>
+<arg>service=${service}</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<status status="FAIL" start="2025-01-10T00:07:58.262480" elapsed="0.003378">NoSuchDriverException: Message: Unable to obtain driver for chrome; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location
+</status>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="NOT RUN" start="2025-01-10T00:07:58.266006" elapsed="0.000025"/>
+</kw>
+<kw name="Set Selenium Speed" owner="SeleniumLibrary">
+<arg>${DELAY}</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="NOT RUN" start="2025-01-10T00:07:58.266101" elapsed="0.000019"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<arg>${LOGIN URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="NOT RUN" start="2025-01-10T00:07:58.266183" elapsed="0.000017"/>
+</kw>
+<kw name="Login Page Should Be Open" owner="resource">
+<status status="NOT RUN" start="2025-01-10T00:07:58.266314" elapsed="0.000043"/>
+</kw>
+<status status="FAIL" start="2025-01-10T00:07:58.260499" elapsed="0.005969">NoSuchDriverException: Message: Unable to obtain driver for chrome; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location
+</status>
+</kw>
+<kw name="Input Username" owner="resource">
+<arg>demo</arg>
+<status status="NOT RUN" start="2025-01-10T00:07:58.266702" elapsed="0.000024"/>
+</kw>
+<kw name="Input Password" owner="resource">
+<arg>mode</arg>
+<status status="NOT RUN" start="2025-01-10T00:07:58.266939" elapsed="0.000040"/>
+</kw>
+<kw name="Submit Credentials" owner="resource">
+<status status="NOT RUN" start="2025-01-10T00:07:58.267135" elapsed="0.000047"/>
+</kw>
+<kw name="Welcome Page Should Be Open" owner="resource">
+<status status="NOT RUN" start="2025-01-10T00:07:58.267339" elapsed="0.000037"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-01-10T00:07:58.267646" elapsed="0.000120"/>
+</kw>
+<status status="FAIL" start="2025-01-10T00:07:58.259899" elapsed="0.007998">NoSuchDriverException: Message: Unable to obtain driver for chrome; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location
+</status>
+</test>
+<doc>A test suite with a single test for valid login.
+
+This test has a workflow that is created using keywords in
+the imported resource file.</doc>
+<status status="FAIL" start="2025-01-10T00:07:57.997114" elapsed="0.271533"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Valid Login">Valid Login</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
